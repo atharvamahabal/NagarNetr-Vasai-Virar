@@ -12,25 +12,25 @@ export const WARD_DATA = [
         "name": "Shri Jayant Shankar Baswant",
         "party": "BVA",
         "seat": "1A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Adv. Asmita Vishal Patil",
         "party": "BVA",
         "seat": "1B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Sunanda Pramod Patil",
         "party": "BVA",
         "seat": "1C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Sadanand Gajanan Patil",
         "party": "BVA",
         "seat": "1D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -45,25 +45,25 @@ export const WARD_DATA = [
         "name": "Mrs. Rina Umakant Wagh",
         "party": "BJP",
         "seat": "2A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Smt Sanvi Sanjog Yande",
         "party": "BJP",
         "seat": "2B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Sri Ravi Srigopal Purohit",
         "party": "BJP",
         "seat": "2C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Jitesh Harishchandra Raut",
         "party": "BJP",
         "seat": "2D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -78,25 +78,25 @@ export const WARD_DATA = [
         "name": "Shri Narendra Vasant Patil",
         "party": "BVA",
         "seat": "3A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Zeenat Tanveer Zahidi",
         "party": "BVA",
         "seat": "3B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Suvarna Rajendra Gaikwad",
         "party": "BVA",
         "seat": "3C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Rohan Shankar Sawant",
         "party": "BVA",
         "seat": "3D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -111,25 +111,25 @@ export const WARD_DATA = [
         "name": "Mrs. Amrita Atul Chorghe",
         "party": "BVA",
         "seat": "4A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Suman Mamta Durgesh",
         "party": "BVA",
         "seat": "4B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Prafulla Jagannath Sane",
         "party": "BVA",
         "seat": "4C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Ajeev Yashwant Patil",
         "party": "BVA",
         "seat": "4D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -144,25 +144,25 @@ export const WARD_DATA = [
         "name": "Mr. Gaurav Vasant Raut",
         "party": "BJP",
         "seat": "5A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Sanjana Ganesh Bhaide",
         "party": "BJP",
         "seat": "5B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Adv. Darshana Tripathi Kotak",
         "party": "BJP",
         "seat": "5C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Mehul Ashok Shah",
         "party": "BJP",
         "seat": "5D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -177,25 +177,25 @@ export const WARD_DATA = [
         "name": "Mrs. Yogita Gawli Karanjkar",
         "party": "BJP",
         "seat": "6A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Smt Sangeeta Kishore Bhere",
         "party": "BVA",
         "seat": "6B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Manjrekar Narayan Suresh",
         "party": "BJP",
         "seat": "6C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Hitesh Narendra Jadhav",
         "party": "BJP",
         "seat": "6D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -210,25 +210,25 @@ export const WARD_DATA = [
         "name": "Mrs. Pratibha Kishore Patil",
         "party": "BVA",
         "seat": "7A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Jha Minu Dhananjay",
         "party": "BVA",
         "seat": "7B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Prashant Dattatreya Raut",
         "party": "BVA",
         "seat": "7C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Nishad Aruna Arun Chorghe",
         "party": "BVA",
         "seat": "7D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -243,25 +243,25 @@ export const WARD_DATA = [
         "name": "Mrs. Nita Sunil Gharat",
         "party": "BVA",
         "seat": "8A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Pradipika Atul Singh",
         "party": "BVA",
         "seat": "8B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Pankaj Padmakar Patil",
         "party": "BVA",
         "seat": "8C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Sachin Sambhaji Desai",
         "party": "BVA",
         "seat": "8D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -276,25 +276,25 @@ export const WARD_DATA = [
         "name": "Mrs. Rupali Sunil Patil",
         "party": "BVA",
         "seat": "9A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Suman Kiran Kakade",
         "party": "BVA",
         "seat": "9B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Nilesh Damodar Deshmukh",
         "party": "BVA",
         "seat": "9C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Vinod Harishchandra Jadhav",
         "party": "BVA",
         "seat": "9D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -309,25 +309,25 @@ export const WARD_DATA = [
         "name": "Mr. Kishore Nana Patil",
         "party": "BJP",
         "seat": "10A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Dimple (Ekta Kaushalend Singh)",
         "party": "BJP",
         "seat": "10B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Smt Tiwari Anju Harikesh",
         "party": "BJP",
         "seat": "10C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Pankaj Dattatreya Deshmukh",
         "party": "BJP",
         "seat": "10D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -342,25 +342,25 @@ export const WARD_DATA = [
         "name": "Mrs. Namita Pritesh Pawar",
         "party": "BJP",
         "seat": "11A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Jitendra Manohar Patil",
         "party": "BJP",
         "seat": "11B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Rasika Rajesh Dhage",
         "party": "BJP",
         "seat": "11C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Manoj Gopal Patil",
         "party": "BJP",
         "seat": "11D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -375,25 +375,25 @@ export const WARD_DATA = [
         "name": "Mrs. Mhatre Jyoti Deepak",
         "party": "BVA",
         "seat": "12A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Kavali Swapnil Jagannath",
         "party": "BVA",
         "seat": "12B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Thalekar Ranjana Ladkya",
         "party": "BVA",
         "seat": "12C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Rumaw Dominic Ignatius",
         "party": "BVA",
         "seat": "12D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -408,25 +408,25 @@ export const WARD_DATA = [
         "name": "Adv. Deepti Chetan Bhoir",
         "party": "BVA",
         "seat": "13A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Dabre Sarl Alex",
         "party": "INC",
         "seat": "13B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr Marshall Dominique Lopes",
         "party": "BVA",
         "seat": "13C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Paresh Prabhakar Kini",
         "party": "BVA",
         "seat": "13D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -441,25 +441,25 @@ export const WARD_DATA = [
         "name": "Smt Sarita Prashant More",
         "party": "BVA",
         "seat": "14A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Atul Ramesh Salunkhe",
         "party": "BVA",
         "seat": "14B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Gayatri Agasti Sawant",
         "party": "BVA",
         "seat": "14C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Alamgir Dyer",
         "party": "BVA",
         "seat": "14D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -474,25 +474,25 @@ export const WARD_DATA = [
         "name": "Mrs. Patil Pragya Kamlakar",
         "party": "BJP",
         "seat": "15A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Chaubey Ritu Sachin",
         "party": "BJP",
         "seat": "15B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Yogesh Suresh Prasad Singh",
         "party": "BJP",
         "seat": "15C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Chandrakant Yashwant Gorivale",
         "party": "BJP",
         "seat": "15D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -507,25 +507,25 @@ export const WARD_DATA = [
         "name": "Shri Nimesh Ramesh Chaudhary",
         "party": "BJP",
         "seat": "16A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Nikam Meera",
         "party": "BJP",
         "seat": "16B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Bunty Tiwari",
         "party": "BJP",
         "seat": "16C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Jaiprakash Singh (JP Singh)",
         "party": "BJP",
         "seat": "16D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -540,25 +540,25 @@ export const WARD_DATA = [
         "name": "Mr. Patil Smita Bhupendra",
         "party": "BJP",
         "seat": "17A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Singh Babita Devaraj",
         "party": "BJP",
         "seat": "17B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Jayaprakash Suresh Vaze",
         "party": "BJP",
         "seat": "17C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Surve Sharad Shankar",
         "party": "BJP",
         "seat": "17D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -573,25 +573,25 @@ export const WARD_DATA = [
         "name": "Shri Ganesh Balkrishna Patil",
         "party": "BJP",
         "seat": "18A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Singh Hemlata Navin",
         "party": "Shiv Sena",
         "seat": "18B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Gharat Khyati Sandeep",
         "party": "BJP",
         "seat": "18C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Sri Srivastava Gangeshwar Lal Awadhesh",
         "party": "BJP",
         "seat": "18D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -606,25 +606,25 @@ export const WARD_DATA = [
         "name": "Mrs. Lata Randhir Kamble",
         "party": "BVA",
         "seat": "19A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Santoor Dharmendra Yadav",
         "party": "BVA",
         "seat": "19B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Patil Prafulla Govind",
         "party": "BVA",
         "seat": "19C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Arshad Jainullah Chowdhury",
         "party": "BVA",
         "seat": "19D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -639,25 +639,25 @@ export const WARD_DATA = [
         "name": "Shri Prasanna Sadanand Bhatankar",
         "party": "BVA",
         "seat": "20A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Ramesh Jairam Ghorkana",
         "party": "BVA",
         "seat": "20B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Yogita Devendra Patil",
         "party": "BVA",
         "seat": "20C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Nisha Jagdish Bhoir",
         "party": "BVA",
         "seat": "20D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -672,25 +672,25 @@ export const WARD_DATA = [
         "name": "Shri Vishal Ramesh Jadhav",
         "party": "BJP",
         "seat": "21A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs Prathanna Praveen Monde",
         "party": "BVA",
         "seat": "21B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Kajal Nitin Gopale",
         "party": "BVA",
         "seat": "21C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Ajit Anant Bhoir",
         "party": "BVA",
         "seat": "21D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -705,25 +705,25 @@ export const WARD_DATA = [
         "name": "Mr. Shelke Ashok Gajanan",
         "party": "BJP",
         "seat": "22A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Rathod Pinky Kanwar A",
         "party": "BJP",
         "seat": "22B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Kalpanashish Nagpure",
         "party": "BJP",
         "seat": "22C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Kakkad Abhay Rasikbhai",
         "party": "BJP",
         "seat": "22D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -738,25 +738,25 @@ export const WARD_DATA = [
         "name": "Mrs. Aparna Padmakar Patil",
         "party": "BJP",
         "seat": "23A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Saravankar Mahesh Sadashiv",
         "party": "BJP",
         "seat": "23B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Doshi Nimmi Nippun",
         "party": "BJP",
         "seat": "23C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Pawar Pradeep Narasimha",
         "party": "BJP",
         "seat": "23D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -771,25 +771,25 @@ export const WARD_DATA = [
         "name": "Shri Kalpesh Narayan Mankar",
         "party": "BVA",
         "seat": "24A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Patil Suvarna Ajit",
         "party": "BVA",
         "seat": "24B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Pushpa Sandesh Jadhav",
         "party": "BVA",
         "seat": "24C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Anthony (Ajay) Tibert Rodrigues",
         "party": "BVA",
         "seat": "24D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -804,25 +804,25 @@ export const WARD_DATA = [
         "name": "Shri Rohini Nilesh Jadhav",
         "party": "BVA",
         "seat": "25A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Chorghe Pankaj Narayan",
         "party": "BVA",
         "seat": "25B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Dabre Aruna Vijay",
         "party": "BVA",
         "seat": "25C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Laurel Diego Dias",
         "party": "BVA",
         "seat": "25D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -837,25 +837,25 @@ export const WARD_DATA = [
         "name": "Mrs. Pramila Manohar Patil",
         "party": "BVA",
         "seat": "26A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Marshalline Azeel Chacko",
         "party": "BVA",
         "seat": "26B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Rodrigues Prakash Duma",
         "party": "BVA",
         "seat": "26C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Dhuri Chandrasekhar Shantaram",
         "party": "BVA",
         "seat": "26D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -870,25 +870,25 @@ export const WARD_DATA = [
         "name": "Sri Jyotsna Sharad Bhagli",
         "party": "BVA",
         "seat": "27A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mr. Acholkar Sunil Moreshwar",
         "party": "BVA",
         "seat": "27B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Deepa Sujesh Patil",
         "party": "BVA",
         "seat": "27C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Kanhaiya Manohar Bhoir",
         "party": "BVA",
         "seat": "27D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -903,25 +903,25 @@ export const WARD_DATA = [
         "name": "Shri Vartak Ashish Jayendra",
         "party": "BVA",
         "seat": "28A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Jyoti Machhindra Dhondekar",
         "party": "BVA",
         "seat": "28B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Bina Michael Fudyado",
         "party": "BVA",
         "seat": "28C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Shri Praveen Chinnaya Shetty",
         "party": "BVA",
         "seat": "28D",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   },
@@ -936,19 +936,19 @@ export const WARD_DATA = [
         "name": "Mrs. Alka Satish Gamjaya",
         "party": "BVA",
         "seat": "29A",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Dr. Shubhangi Hemant Patil",
         "party": "BVA",
         "seat": "29B",
-        "phone": "919689900002"
+        "phone": "9665877727"
       },
       {
         "name": "Mrs. Afif Jamil Ahmad Shaikh",
         "party": "BVA",
         "seat": "29C",
-        "phone": "919689900002"
+        "phone": "9665877727"
       }
     ]
   }
