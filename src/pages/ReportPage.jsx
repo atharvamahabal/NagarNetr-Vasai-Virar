@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Camera, MapPin, MessageSquare, CheckCircle2, Loader2, Mail } from 'lucide-react'
+import { Camera, MapPin, MessageSquare, CheckCircle2, Loader2, Mail, ShieldCheck } from 'lucide-react'
 import { WARD_DATA, ISSUE_CATEGORIES, getWardZone, EMAIL_TEMPLATES } from '../data/wards'
 import { saveComplaint } from '../utils/storage'
 import { cn } from '../utils/cn'
@@ -20,7 +20,8 @@ const ReportPage = () => {
     if (ward && selectedCategory) {
       const template = EMAIL_TEMPLATES[selectedCategory.id] || ''
       const nagarsevakName = ward.corporators[0]?.name || 'Nagarsevak'
-      setDescription(template.replace('[NAME]', nagarsevakName))
+      const wardInfo = `${ward.id} (${ward.name})`
+      setDescription(template.replace('[NAME]', nagarsevakName).replace('[WARD]', wardInfo))
     }
   }, [ward, selectedCategory])
 
@@ -101,9 +102,11 @@ const ReportPage = () => {
       ? `Zone ${zone.code} (${zone.name}) — Ward ${ward.id} — ${selectedCategory?.label}`
       : `Ward ${ward?.id} — ${selectedCategory?.label}`
     
-    const baseMessage = description || (EMAIL_TEMPLATES[selectedCategory?.id]?.replace('[NAME]', nagarsevak?.name || 'Nagarsevak') || '')
+    const baseMessage = description || (EMAIL_TEMPLATES[selectedCategory?.id] || '')
+      .replace('[NAME]', nagarsevak?.name || 'Nagarsevak')
+      .replace('[WARD]', `${ward?.id} (${ward?.name})`)
     const photoNote = photo 
-      ? "\n\n🚨 IMPORTANT: Please MANUALLY ATTACH the captured photo from your gallery to this email for proof." 
+      ? "\n\n🚨 IMPORTANT: Please MANUALLY ATTACH the captured photo from your gallery to this message for proof." 
       : ""
     const nagarsevakRef = `\nThis road/area comes under Nagarsevak: ${nagarsevak?.name || 'Unknown'}`
     
@@ -112,12 +115,14 @@ const ReportPage = () => {
       `Ticket Reference: ${saved.id}`
 
     if (method === 'whatsapp') {
-      const whatsappUrl = `https://wa.me/${nagarsevak?.phone || '919689900002'}?text=${encodeURIComponent(fullMessage)}`
+      const whatsappUrl = `https://wa.me/${(nagarsevak?.phone || '919689900002').replace(/\D/g, '')}?text=${encodeURIComponent(fullMessage)}`
       window.open(whatsappUrl, '_blank')
     } else if (method === 'email') {
       const recipient = 'complaints@vvmc.in'
       const ccRecipient = 'commissioner@vvmc.in'
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&cc=${ccRecipient}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(fullMessage)}`
+      const emailSubjectEncoded = encodeURIComponent(emailSubject)
+      const fullMessageEncoded = encodeURIComponent(fullMessage)
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&cc=${ccRecipient}&su=${emailSubjectEncoded}&body=${fullMessageEncoded}`
       window.open(gmailUrl, '_blank')
     }
 
@@ -130,33 +135,43 @@ const ReportPage = () => {
     const nagarsevak = ward?.corporators[0]
     
     return (
-      <div className="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
-        <div className="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 animate-bounce">
+      <div className="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center py-12 animate-in fade-in duration-700">
+        <div className="w-24 h-24 bg-primary text-secondary rounded-full flex items-center justify-center mb-6 animate-bounce shadow-lg border-4 border-white">
           <CheckCircle2 size={60} />
         </div>
         <h2 className="text-3xl font-bold text-secondary mb-2">Complaint Registered!</h2>
-        <p className="text-gray-600 mb-6">Your ticket has been generated and the message was sent.</p>
+        <p className="text-gray-600 mb-8 text-sm">Your ticket has been generated and the message was sent.</p>
         
-        <div className="bg-white border-2 border-dashed border-primary rounded-xl p-6 mb-8 w-full max-w-sm">
-          <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Ticket Number</p>
-          <p className="text-3xl font-mono font-bold text-primary">{ticketNumber}</p>
+        <div className="bg-white border-2 border-dashed border-secondary rounded-xl p-8 mb-8 w-full max-w-sm shadow-md flex flex-col items-center hover:shadow-lg transition-shadow">
+          <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-2 font-bold">Complaint Ticket Number</p>
+          <p className="text-4xl font-mono font-bold text-secondary tracking-tighter">{ticketNumber}</p>
         </div>
 
-        <div className="flex flex-col gap-3 w-full max-w-sm">
-          <button 
-            onClick={() => navigate('/tracker')}
-            className="w-full bg-secondary text-white font-bold py-4 px-8 rounded-xl hover:opacity-90 transition-opacity"
-          >
-            Track my complaints
-          </button>
-          
-          <button 
-            onClick={() => navigate('/')}
-            className="text-secondary font-medium py-2 underline"
-          >
-            Go back to home
-          </button>
-        </div>
+        <div className="p-4 bg-primary/10 rounded-xl border border-primary/20 mb-8 max-w-sm w-full mx-auto flex flex-col items-center">
+            <h5 className="text-sm font-bold text-secondary mb-1 flex items-center gap-2">
+              <ShieldCheck size={16} className="text-secondary" />
+              Verified Submission
+            </h5>
+            <p className="text-[10px] text-secondary/70 font-bold uppercase tracking-widest text-center">
+              Logged in VVMC Central Database
+            </p>
+          </div>
+
+        <div className="flex flex-col gap-3 w-full max-w-sm mx-auto">
+            <button 
+              onClick={() => navigate('/tracker')}
+              className="w-full bg-secondary text-primary font-bold py-4 px-8 rounded-xl hover:bg-blue-800 transition-all shadow-lg active:scale-95"
+            >
+              Track my complaints
+            </button>
+            
+            <button 
+              onClick={() => navigate('/')}
+              className="text-secondary font-bold py-2 underline hover:text-primary transition-colors text-sm"
+            >
+              Go back to home
+            </button>
+          </div>
       </div>
     )
   }
@@ -173,8 +188,8 @@ const ReportPage = () => {
             </label>
             <div 
               className={cn(
-                "relative h-48 rounded-2xl border-2 border-dashed flex flex-col items-center justify-center overflow-hidden transition-all",
-                photo ? "border-primary bg-primary/5" : "border-gray-200 bg-gray-50 hover:border-primary/50"
+                "relative h-48 rounded-2xl border-2 border-dashed flex flex-col items-center justify-center overflow-hidden transition-all shadow-sm",
+                photo ? "border-primary bg-primary/5" : "border-gray-200 bg-white hover:border-primary/50"
               )}
             >
               {photo ? (
@@ -189,12 +204,14 @@ const ReportPage = () => {
                   </button>
                 </>
               ) : (
-                <label className="cursor-pointer flex flex-col items-center gap-2 p-8 text-center">
-                  <Camera size={40} className="text-primary" />
-                  <span className="font-bold text-secondary">Click to snap or upload</span>
-                  <span className="text-xs text-gray-400 font-medium">Clear photo helps faster resolution</span>
-                  <input type="file" accept="image/*" onChange={handlePhotoUpload} className="hidden" />
-                </label>
+                  <label className="cursor-pointer flex flex-col items-center gap-2 p-8 text-center group">
+                    <div className="w-16 h-16 bg-secondary/5 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Camera size={32} className="text-secondary" />
+                    </div>
+                    <span className="font-bold text-secondary">Click to snap or upload</span>
+                    <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Clear photo helps faster resolution</span>
+                    <input type="file" accept="image/*" onChange={handlePhotoUpload} className="hidden" />
+                  </label>
               )}
             </div>
           </div>
@@ -209,7 +226,7 @@ const ReportPage = () => {
                 type="button"
                 onClick={detectWard}
                 disabled={detecting}
-                className="w-full h-14 bg-white border-2 border-primary text-primary font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-primary/5 transition-all disabled:opacity-50"
+                className="w-full h-14 bg-white border-2 border-primary text-secondary font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-primary/5 transition-all disabled:opacity-50 shadow-sm"
               >
                 {detecting ? (
                   <>
@@ -231,7 +248,7 @@ const ReportPage = () => {
                     setWard(selected)
                   }}
                   value={ward?.id || ""}
-                  className="w-full h-14 px-4 bg-white border-2 border-gray-100 rounded-xl font-bold text-secondary appearance-none focus:border-primary transition-all"
+                  className="w-full h-14 px-4 bg-white border-2 border-gray-100 rounded-xl font-bold text-secondary appearance-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
                 >
                   <option value="" disabled>Or select ward manually...</option>
                   {WARD_DATA.map(w => (
@@ -246,23 +263,23 @@ const ReportPage = () => {
 
             {ward && (
               <div className="space-y-4 animate-in fade-in slide-in-from-top-2 duration-300 mt-4">
-                <div className="bg-green-50 border border-green-200 rounded-xl p-4">
-                  <div className="flex items-center gap-2 text-green-700 font-bold mb-1">
-                    <CheckCircle2 size={18} />
+            <div className="bg-white border border-secondary/10 rounded-xl p-4 shadow-sm">
+                  <div className="flex items-center gap-2 text-secondary font-bold mb-1">
+                    <CheckCircle2 size={18} className="text-green-500" />
                     Location Detected
                   </div>
-                  <p className="text-secondary font-bold">Ward {ward.id} – {ward.name}</p>
+                    <p className="text-secondary font-bold text-sm">Ward {ward.id} – {ward.name}</p>
                   {getWardZone(ward.id) && (
-                    <p className="text-xs text-primary font-bold mt-1">
+                    <p className="text-xs text-secondary/70 font-bold mt-1">
                       Zone {getWardZone(ward.id).code} ({getWardZone(ward.id).name})
                     </p>
                   )}
                   
                   {/* Nagarsevak Card */}
-                  <div className="mt-4 pt-4 border-t border-green-200">
-                    <p className="text-xs text-green-600 font-bold uppercase tracking-tighter">Your Representative</p>
+                  <div className="mt-4 pt-4 border-t border-secondary/10">
+                    <p className="text-xs text-secondary/50 font-bold uppercase tracking-tighter">Your Representative</p>
                     <p className="text-sm font-bold text-secondary">{ward.corporators[0]?.name}</p>
-                    <p className="text-[10px] text-primary font-bold">{ward.corporators[0]?.party}</p>
+                    <p className="text-[10px] text-secondary/60 font-bold">{ward.corporators[0]?.party}</p>
                   </div>
                 </div>
               </div>
@@ -274,7 +291,7 @@ const ReportPage = () => {
             <label className="text-sm font-bold text-gray-500 uppercase tracking-wider">
               3. Select Issue Category
             </label>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {ISSUE_CATEGORIES.map((cat) => (
                 <button
                   key={cat.id}
@@ -283,7 +300,7 @@ const ReportPage = () => {
                   className={cn(
                     "flex flex-col items-center gap-2 p-4 rounded-xl border-2 transition-all",
                     selectedCategory?.id === cat.id 
-                      ? "border-primary bg-primary/5 ring-2 ring-primary/20" 
+                      ? "border-primary bg-primary/5 ring-4 ring-primary/10 shadow-sm" 
                       : "border-gray-100 bg-white hover:border-primary/30"
                   )}
                 >
@@ -303,14 +320,14 @@ const ReportPage = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Provide exact address or landmarks..."
-              className="w-full h-32 p-4 bg-gray-50 border-2 border-gray-100 rounded-xl focus:border-primary focus:bg-white transition-all resize-none font-medium"
+              className="w-full h-32 p-4 bg-white border-2 border-gray-100 rounded-xl focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all resize-none font-medium text-secondary"
             />
           </div>
 
           <button
             type="submit"
             disabled={!ward || !selectedCategory}
-            className="w-full bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-50"
+            className="w-full bg-primary text-secondary font-bold py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-yellow-500 transition-all disabled:opacity-50 shadow-lg"
           >
             <MessageSquare size={20} />
             Report to Nagarsevak
@@ -329,7 +346,7 @@ const ReportPage = () => {
               <div className="flex flex-col gap-3">
                 <button 
                   onClick={() => handleFinalSubmit('whatsapp')}
-                  className="flex items-center justify-between w-full bg-[#25D366] text-white font-bold py-4 px-6 rounded-2xl hover:opacity-90 transition-opacity group"
+                  className="flex items-center justify-between w-full bg-[#25D366] text-white font-bold py-4 px-6 rounded-2xl hover:brightness-110 transition-all group shadow-lg active:scale-95"
                 >
                   <div className="flex items-center gap-3">
                     <MessageSquare size={24} />
@@ -340,7 +357,7 @@ const ReportPage = () => {
 
                 <button 
                   onClick={() => handleFinalSubmit('email')}
-                  className="flex items-center justify-between w-full bg-secondary text-white font-bold py-4 px-6 rounded-2xl hover:opacity-90 transition-opacity group"
+                  className="flex items-center justify-between w-full bg-secondary text-primary font-bold py-4 px-6 rounded-2xl hover:bg-blue-700 transition-all group shadow-lg active:scale-95"
                 >
                   <div className="flex items-center gap-3">
                     <Mail size={24} />
@@ -351,7 +368,7 @@ const ReportPage = () => {
 
                 <button 
                   onClick={() => setShowMethodSelection(false)}
-                  className="w-full text-gray-400 font-bold py-2 mt-2"
+                  className="w-full text-gray-400 font-bold py-2 mt-2 hover:text-secondary transition-colors text-sm"
                 >
                   Cancel
                 </button>

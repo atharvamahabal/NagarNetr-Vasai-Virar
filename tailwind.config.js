@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#FF6B00",
-        secondary: "#1A3A5C",
+        primary: "#FACC15", // Vibrant Yellow (Tailwind yellow-400)
+        secondary: "#1E40AF", // Deep Blue (Tailwind blue-800)
       },
     },
   },

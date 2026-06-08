@@ -14,7 +14,7 @@ const LandingPage = () => {
         </p>
         <Link 
           to="/report" 
-          className="inline-flex items-center gap-2 bg-primary hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform active:scale-95"
+          className="inline-flex items-center gap-2 bg-primary hover:bg-yellow-500 text-secondary font-bold py-4 px-8 rounded-full text-lg transition-transform active:scale-95 shadow-lg"
         >
           Report an Issue
           <ArrowRight size={20} />
@@ -22,17 +22,17 @@ const LandingPage = () => {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-primary text-white py-4 px-6 flex justify-around items-center text-center">
+      <section className="bg-primary text-secondary py-4 px-6 flex justify-around items-center text-center font-bold">
         <div>
           <p className="text-2xl font-bold leading-none">115</p>
           <p className="text-[10px] uppercase tracking-wider">Nagarsevaks</p>
         </div>
-        <div className="w-px h-8 bg-white/30" />
+        <div className="w-px h-8 bg-secondary/20" />
         <div>
           <p className="text-2xl font-bold leading-none">29</p>
           <p className="text-[10px] uppercase tracking-wider">Wards</p>
         </div>
-        <div className="w-px h-8 bg-white/30" />
+        <div className="w-px h-8 bg-secondary/20" />
         <div>
           <p className="text-lg font-bold leading-none leading-tight">VVMC</p>
           <p className="text-[10px] uppercase tracking-wider">VVMC Corp.</p>
@@ -44,25 +44,25 @@ const LandingPage = () => {
         <h3 className="text-2xl font-bold text-secondary text-center mb-12">How it works</h3>
         <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
           <div className="flex flex-col items-center text-center">
-            <div className="w-20 h-20 bg-orange-100 text-primary rounded-full flex items-center justify-center mb-4">
+            <div className="w-20 h-20 bg-primary/10 text-secondary rounded-full flex items-center justify-center mb-4 border-2 border-primary/20">
               <Camera size={40} />
             </div>
-            <h4 className="font-bold text-lg mb-2">1. Click Photo</h4>
-            <p className="text-gray-600">Take a photo of the civic issue (pothole, garbage, etc.)</p>
+            <h4 className="font-bold text-lg mb-2 text-secondary">1. Click Photo</h4>
+            <p className="text-gray-600 text-sm">Take a photo of the civic issue (pothole, garbage, etc.)</p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="w-20 h-20 bg-blue-100 text-secondary rounded-full flex items-center justify-center mb-4">
+            <div className="w-20 h-20 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-4 border-2 border-secondary/20">
               <MapPin size={40} />
             </div>
-            <h4 className="font-bold text-lg mb-2">2. GPS Detects Ward</h4>
-            <p className="text-gray-600">The app automatically detects your ward and Nagarsevak.</p>
+            <h4 className="font-bold text-lg mb-2 text-secondary">2. GPS Detects Ward</h4>
+            <p className="text-gray-600 text-sm">The app automatically detects your ward and Nagarsevak.</p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+            <div className="w-20 h-20 bg-green-100 text-green-700 rounded-full flex items-center justify-center mb-4 border-2 border-green-200">
               <Send size={40} />
             </div>
-            <h4 className="font-bold text-lg mb-2">3. Nagarsevak Notified</h4>
-            <p className="text-gray-600">Your complaint is sent directly to your elected representative.</p>
+            <h4 className="font-bold text-lg mb-2 text-secondary">3. Nagarsevak Notified</h4>
+            <p className="text-gray-600 text-sm">Your complaint is sent directly to your elected representative.</p>
           </div>
         </div>
       </section>
@@ -70,21 +70,21 @@ const LandingPage = () => {
       {/* Quick Links */}
       <section className="bg-gray-50 px-6 py-12 border-t border-gray-200">
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-          <Link to="/map" className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 text-center">
-            <MapIcon className="text-primary" size={24} />
-            <span className="text-sm font-medium">Ward Map</span>
+          <Link to="/map" className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 text-center hover:border-primary transition-colors group">
+            <MapIcon className="text-secondary group-hover:text-primary transition-colors" size={24} />
+            <span className="text-sm font-medium text-secondary">Ward Map</span>
           </Link>
-          <Link to="/directory" className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 text-center">
-            <Users className="text-primary" size={24} />
-            <span className="text-sm font-medium">Directory</span>
+          <Link to="/directory" className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 text-center hover:border-primary transition-colors group">
+            <Users className="text-secondary group-hover:text-primary transition-colors" size={24} />
+            <span className="text-sm font-medium text-secondary">Directory</span>
           </Link>
-          <Link to="/tracker" className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 text-center">
-            <ClipboardList className="text-primary" size={24} />
-            <span className="text-sm font-medium">My Trackers</span>
+          <Link to="/tracker" className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 text-center hover:border-primary transition-colors group">
+            <ClipboardList className="text-secondary group-hover:text-primary transition-colors" size={24} />
+            <span className="text-sm font-medium text-secondary">My Trackers</span>
           </Link>
-          <Link to="/about" className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 text-center">
-            <Users className="text-primary" size={24} />
-            <span className="text-sm font-medium">About VVMC</span>
+          <Link to="/about" className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 text-center hover:border-primary transition-colors group">
+            <Users className="text-secondary group-hover:text-primary transition-colors" size={24} />
+            <span className="text-sm font-medium text-secondary">About VVMC</span>
           </Link>
         </div>
       </section>

@@ -43,11 +43,11 @@ const AboutPage = () => {
             <div key={idx} className="flex flex-col items-center w-full">
               <div className={`
                 flex items-center gap-4 px-6 py-3 rounded-xl border w-full max-w-sm transition-all
-                ${item.active ? 'bg-primary border-primary text-white scale-105 shadow-lg' : 'bg-white border-gray-100 text-gray-500'}
+                ${item.active ? 'bg-primary border-primary text-secondary scale-105 shadow-lg font-bold' : 'bg-white border-gray-100 text-gray-500'}
               `}>
-                <item.icon size={20} className={item.active ? 'text-white' : 'text-gray-400'} />
+                <item.icon size={20} className={item.active ? 'text-secondary' : 'text-gray-400'} />
                 <span className="font-bold text-sm">{item.level}</span>
-                {item.active && <span className="ml-auto text-[10px] bg-white text-primary px-2 py-0.5 rounded-full uppercase">You are here</span>}
+                {item.active && <span className="ml-auto text-[10px] bg-secondary text-primary px-2 py-0.5 rounded-full uppercase">You are here</span>}
               </div>
               {idx < hierarchy.length - 1 && (
                 <div className="h-4 w-px bg-gray-200 my-1" />
