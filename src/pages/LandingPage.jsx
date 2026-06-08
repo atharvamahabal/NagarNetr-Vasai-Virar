@@ -6,7 +6,7 @@ const LandingPage = () => {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="bg-secondary text-white px-6 py-16 text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-primary mb-2">NagarNetr</h1>
+        <h1 className="text-4xl md:text-6xl font-extrabold text-primary mb-2">NagarNetr-Vasai Virar</h1>
         <h2 className="text-xl md:text-2xl font-medium mb-6">नगर नेत्र - आपलं शहर, आपली जबाबदारी</h2>
         <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
           Report civic issues like potholes, garbage, and broken streetlights. 

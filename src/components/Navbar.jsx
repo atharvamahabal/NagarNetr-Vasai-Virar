@@ -19,7 +19,7 @@ const Navbar = () => {
       <Link to="/" className="flex items-center gap-2">
         <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center font-bold text-xl">N</div>
         <div>
-          <h1 className="text-xl font-bold leading-none">NagarNetr</h1>
+          <h1 className="text-xl font-bold leading-none">NagarNetr-Vasai Virar</h1>
           <p className="text-[10px] text-gray-300">नगर नेत्र - आपलं शहर, आपली जबाबदारी</p>
         </div>
       </Link>

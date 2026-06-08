@@ -19,9 +19,9 @@ const AboutPage = () => {
     <div className="p-6 max-w-3xl mx-auto space-y-12">
       {/* Introduction */}
       <section className="text-center">
-        <h1 className="text-3xl font-bold text-secondary mb-4">About NagarNetr</h1>
+        <h1 className="text-3xl font-bold text-secondary mb-4">About NagarNetr-Vasai Virar</h1>
         <p className="text-gray-600">
-          NagarNetr is a citizen-first platform designed to bridge the gap between Vasai-Virar residents and their elected representatives. 
+          NagarNetr-Vasai Virar is a citizen-first platform designed to bridge the gap between Vasai-Virar residents and their elected representatives. 
           By leveraging GPS and mobile technology, we ensure your voice reaches the right person instantly.
         </p>
       </section>
