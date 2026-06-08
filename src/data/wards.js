@@ -1,4 +1,4 @@
-const TEST_PHONE = "919689900002";
+const TEST_PHONE = "9665877727";
 
 export const WARD_DATA = [
   {
@@ -1001,16 +1001,31 @@ const WARD_TO_ZONE = {
   "26": "F",
   "27": "F",
   "28": "G",
-  "29": "G"
+  "29": "G",
+  "33": "G",
+  "34": "G",
+  "30": "H",
+  "31": "H",
+  "32": "H",
+  "35": "H",
+  "36": "H",
+  "37": "I",
+  "38": "I",
+  "39": "I",
+  "40": "I",
+  "41": "I",
+  "42": "I"
 };
 const ZONE_MAP = {
-  "A": "Virar West",
-  "B": "Virar East",
-  "C": "Virar East & Rural",
-  "D": "Nalasopara East",
-  "E": "Nalasopara West",
-  "F": "Pelhar / Waliv / Dhaniv",
-  "G": "Vasai East"
+  "A": "Virar West (Bolinj, Agashi, Central West)",
+  "B": "Virar East (Manvelpada, Chandansar, Phoolpada)",
+  "C": "Virar East & Rural Boundaries",
+  "D": "Nalasopara East (Achole, Moregaon)",
+  "E": "Nalasopara West (Samelpada, Nilemore)",
+  "F": "Pelhar, Waliv, Dhaniv (Eastern industrial/rural belts)",
+  "G": "Vasai East (Navghar, Manikpur, Chulne)",
+  "H": "Vasai West (Vasai Gaon, Sandor, Diwanman)",
+  "I": "Naigaon (East & West, Juchandra)"
 };
 
 export const getWardZone = (wardId) => {

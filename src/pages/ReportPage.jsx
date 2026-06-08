@@ -115,10 +115,10 @@ const ReportPage = () => {
       `Ticket Reference: ${saved.id}`
 
     if (method === 'whatsapp') {
-      const whatsappUrl = `https://wa.me/${(nagarsevak?.phone || '919689900002').replace(/\D/g, '')}?text=${encodeURIComponent(fullMessage)}`
+      const whatsappUrl = `https://wa.me/${(nagarsevak?.phone || '9665877727').replace(/\D/g, '')}?text=${encodeURIComponent(fullMessage)}`
       window.open(whatsappUrl, '_blank')
     } else if (method === 'email') {
-      const recipient = 'complaints@vvmc.in'
+      const recipient = 'vasaivirarcorporation@gmail.com'
       const ccRecipient = 'commissioner@vvmc.in'
       const emailSubjectEncoded = encodeURIComponent(emailSubject)
       const fullMessageEncoded = encodeURIComponent(fullMessage)
@@ -251,9 +251,14 @@ const ReportPage = () => {
                   className="w-full h-14 px-4 bg-white border-2 border-gray-100 rounded-xl font-bold text-secondary appearance-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
                 >
                   <option value="" disabled>Or select ward manually...</option>
-                  {WARD_DATA.map(w => (
-                    <option key={w.id} value={w.id}>Ward {w.id}: {w.name}</option>
-                  ))}
+                  {WARD_DATA.map(w => {
+                    const zone = getWardZone(w.id);
+                    return (
+                      <option key={w.id} value={w.id}>
+                        Ward {zone.code} — Ward {w.id}: {zone.name}
+                      </option>
+                    );
+                  })}
                 </select>
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
                   ▼
